@@ -1,0 +1,202 @@
+body {
+    background-color: #1d1124;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.cursor{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease-out;
+}
+#saturno{
+    opacity: 0.58;
+    z-index: 5;
+}
+.titulo {
+    font-family: Verdana;
+    position: relative;
+    top: 25px;
+}
+
+h1 {
+    font-family: Verdana;
+}
+
+h1,
+p {
+    color: #dfdde0;
+}
+
+header {
+    background-image: url("Icons/ceu-roxo.png");
+    background-position: center;
+    background-size: cover;
+    height: 140px;
+    position: relative;
+    top: -22px;
+    text-align: center;
+
+}
+.calculadoras{
+    position: relative;
+    left: 40%;
+    text-align: center;
+}
+
+
+#input {
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    width: 30%;
+    background-color: rgba(240, 248, 255, 0.801);
+    position: relative;
+    left: -20px;
+    top: 20px;
+}
+
+::placeholder {
+    color: #53455c;
+}
+
+.bott {
+    border-radius: 5px;
+    border: none;
+    background: none;
+    transition: background-color 0.3s;
+    height: 40px;
+    width: 45px;
+}
+
+.bott:hover {
+    background-color: rgba(240, 248, 255, 0.205);
+}
+
+#calc {
+    position: relative;
+    right: 18%;
+    bottom: 50px;
+}
+
+#comu {
+    position: relative;
+    right: 25%;
+    bottom: 50px;
+}
+
+#user {
+    position: relative;
+    right: 32%;
+    bottom: 50px;
+}
+
+#search {
+    width: 3%;
+    position: relative;
+    top: 20px;
+    right: 70px;
+    border: none;
+    color: transparent;
+    background-color: transparent;
+}
+
+.calc{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 930%;
+    align-items: center;
+    background-color: #8902cc;
+    border: none;
+    opacity: 58%;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    color: #dfdde0;
+    font-size: 1em;
+}
+#calcbox{
+    position: relative;
+    left: 40%;
+    text-align: center;
+    width: 340px;
+    border: 1px solid black;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    height: 30px;
+    opacity: 80%;
+}
+#resultadodacalc{
+    color:black;
+}
+.botao {
+    background-color: #8902cc;
+    opacity: 58%;
+    border-radius: 6px;
+    border: none;
+    width: 230px;
+    height: 50px;
+    font-size: 1em;
+    color: #dfdde0;
+    transition: opacity 0.3s;
+    margin-bottom: 1vh;
+}
+.botao:hover {
+    opacity: 65%;
+}
+.abc{
+    padding: 55px;
+    display: flex;
+    text-align: center;
+}
+
+.b{
+    position: relative;
+    left: 5%;
+}
+.c{
+    position: relative;
+    left: 10%;
+}
+.input {
+    border-radius: 6px;
+    background-color: rgba(240, 248, 255, 0.801);
+    border: none;
+}
+
+footer {
+    position: relative;
+    
+}
+
+.dois {
+    color: #dfdde0;
+}
+
+.img {
+    height: 150px;
+    position: relative;
+    left: 7%;
+    top: 130px;
+
+}
+
+h3 {
+    color: #dfdde0;
+}
+
+.copy {
+    position: relative;
+    top: -20px;
+    text-align: center;
+}
+
+.pe {
+    position: relative;
+    text-align: center;
+    bottom: 20px;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="comunidade css.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Space Math</title>
+  </head>
+  <body>
+    <div class="cursor">
+      <img src="Icons/saturno.png" width="100px" id="saturno" />
+    </div>
+    <script>
+      let bola = document.querySelector(".cursor");
+
+      document.addEventListener("mousemove", function (m) {
+        let y = m.pageY - 15;
+        let x = m.pageX - 15;
+
+        bola.style.left = x + "px";
+        bola.style.top = y + "px";
+      });
+    </script>
+
+    <header>
+      <h1 class="titulo">Space Math</h1>
+      <a href="comunidade html.html"><button class="bott" id="comu">
+        <i class="fa-solid fa-users fa-2x" style="color: #8902cc"></i>
+      </button></a>
+      <a href="login.html"><button class="bott" id="user">
+        <i class="fa-solid fa-user fa-2x" style="color: #8902cc"></i>
+      </button></a>
+      <input id="input" type="text" placeholder="Tire suas dúvidas" />
+      <button id="search">
+        <i class="fa-solid fa-magnifying-glass" style="color: #8902cc"></i>
+      </button>
+    </header>
+
+    <div class="comments-section">
+      <h1>Comunidade</h1>
+
+      <div class="uou">
+        <p class="user">NãoSeiMatBásica69</p>
+        <img src="Icons/icon 1.jfif" alt="user" class="astro1" />
+        <p class="comentario">
+          Mano, não sei matemática básica, pfv algm resolva e de uma explicação detalhada.. :(
+          <br>
+          <br>
+          Um triângulo retângulo tem catetos de 12 cm e 16 cm. <br />
+          Determine a medida da sua hipotenusa.
+        </p>
+
+        <p class="res">Respostas</p>
+
+        <p class="user">BombadoSemBomba</p>
+        <img src="Icons/icons 2.png" alt="user" class="astro" />
+        <p class="comentario1">
+          Opa meu Nobre, aqui a resposta:
+          <br />
+          <br />
+          x² - 50x + 2500 = 0
+          <br />
+          <br />
+          (x - 25)(x - 100) = 0
+          <br />
+          <br />
+          x = 25 ou x = 100
+          <br />
+          <br />
+          Assim, as dimensões do terreno
+          <br />são 25 m x 100 m ou 100 m x 25 m.
+        </p>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <p class="user">Doidin Biruleibe</p>
+        <img src="Icons/icons 3.jfif" alt="user" class="astro1" />
+        <p class="comentario3">
+          Cara, matemática É UMA PO***, me ajudem pfv..
+          <br />
+          <br />
+          Um terreno retangular tem área de 500 m² e perímetro de 200 m.
+          <br />
+          Determine as dimensões do terreno, sabendo que o comprimento é 50%
+          maior que a largura.
+        </p>
+
+        <p class="res">Respostas</p>
+
+        <p class="user">DogoComuna</p>
+        <img src="Icons/icons 4.jfif" alt="user" class="astro" />
+        <p class="comentario4">
+          Calma calabreso, não é algo dificil kkkkk
+          <br />
+          <br />
+          x² - 75x + 2500 = 0
+          <br />
+          <br />
+          (x - 50)(x - 50) = 0
+          <br />
+          <br />
+          x = 50 ou x = 50
+          <br />
+          <br />
+          Assim, as dimensões do terreno
+          <br>são 50 m x 25 m ou 25 m x 50 m.
+        </p>
+      </div>
+
+      <ul id="comment-list"></ul>
+      <div>
+        <input
+          type="text"
+          id="comment-input"
+          placeholder="Adicione um comentário"
+        />
+        <a href="login.html"><button id="comment-button">Comentar</button></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="DEV">
+      <h3>Desenvolvedores</h3>
+      <p>Danilaishonshon</p>
+      <p>Jasa</p>
+      <p>Julha</p>
+      </div>
+      <img src="Icons/logofooter.png" class="img" />
+      <div class="pe">
+        <h3>Mídia social</h3>
+        <button class="bott">
+          <i class="fa-brands fa-instagram fa-2x" style="color: #8902cc"></i>
+        </button>
+        <button class="bott">
+          <i class="fa-brands fa-twitter fa-2x" style="color: #8902cc"></i>
+        </button>
+        <button class="bott">
+          <i class="fa-brands fa-facebook fa-2x" style="color: #8902cc"></i>
+        </button>
+      </div>
+
+      <p class="copy">&copy; Space Math 2023. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

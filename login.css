@@ -1,0 +1,70 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat, repeat-x;
+    background-position: top right, center;
+    color: #dfdde0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#saturno {
+    opacity: 0.58;
+}
+
+.main-login {
+    text-align: center;
+    position: relative;
+    top: 370px;
+}
+
+input {
+    border-radius: 15px;
+    margin-bottom: 10px;
+    width: 20%;
+    height: 18px;
+    opacity: 0.58;
+    border: none;
+    text-align: center;
+}
+
+.cursor {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    display: block;
+    transition: all 0.5s ease-out;
+
+}
+
+#saturno {
+    opacity: 0.58;
+}
+
+button {
+    opacity: 0.58;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 5px;
+    transition: opacity 0.3s;
+}
+button:hover {
+    opacity: 0.50;
+}
+.bott {
+    border-radius: 5px;
+    border: none;
+    background: none;
+    transition: background-color 0.3s;
+    height: 40px;
+    width: 45px;
+}
+.bott:hover {
+    background-color: rgba(240, 248, 255, 0.205);
+}
+h1 {
+    opacity: 0.90;
+}

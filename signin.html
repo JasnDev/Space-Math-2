@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="cursor">
+        <img src="jupyter.png" width="100px" id="saturno">
+    </div>
+    <script>
+        let bola = document.querySelector(".cursor")
+
+        document.addEventListener('mousemove', function (m) {
+            let y = m.pageY - 15;
+            let x = m.pageX - 15;
+
+            bola.style.left = x + 'px';
+            bola.style.top = y + 'px'
+        })
+    </script>
+    <div class="main-login">
+        <h1>Sign in</h1>
+        <input type="text" class="name" placeholder="name">
+        <br>
+        <input type="email" class="email" placeholder="email">
+        <br>
+        <input type="password" class="password" placeholder="password">
+        <br>
+        <a href="login.html"><button> Sign in </button>
+        <br>
+        <a href="https://pt-br.facebook.com/"><button class="bott"><i class="fa-brands fa-facebook fa-2x" style="color: #8902cc;"></i></button></a>
+        <a href="https://www.google.com.br/"><button class="bott"><i class="fa-brands fa-google fa-2x" style="color: #8902cc;"></i></button></a>
+        <a href="https://github.com/"><button class="bott"><i class="fa-brands fa-github fa-2x" style="color: #8902cc;"></i></a>
+        
+    </div>
+</body>
+
+</html>

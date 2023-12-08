@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Space Math</title>
+</head>
+
+<body>
+    <div class="cursor">
+        <img src="jupyter.png" id="saturno" width="100px">
+    </div>
+    <script>
+        let bola = document.querySelector(".cursor");
+
+        document.addEventListener('mousemove', function (m) {
+            let y = m.pageY - 15;
+            let x = m.pageX - 15;
+
+            bola.style.left = x + 'px';
+            bola.style.top = y + 'px';
+        })
+    </script>
+    <header>
+        <h1 class="titulo">Space Math</h1>
+        <a href="comunidade html.html"><button class="bott" id="comu">
+            <i class="fa-solid fa-users fa-2x" style="color: #8902cc;"></i>
+        </button></a>
+        <a href="login.html"><button class="bott" id="user">
+            <i class="fa-solid fa-user fa-2x" style="color: #8902cc;"></i>
+        </button></a>
+        <input id="input" type="text" placeholder="Tire suas dúvidas">
+        <button id="search">
+            <i class="fa-solid fa-magnifying-glass" style="color: #8902cc;"></i>
+        </button>
+    </header>
+
+    <main>
+        <div id="calcbox">
+            <p id="resultadodacalc"> </p>
+        </div>
+        
+        <table>
+            <tr>
+                <td><button onclick="clean()" class="calc">C</button></td>
+                <td><button onclick="back()" class="calc">Back</button></td>
+                <td><button onclick="insert('/')" class="calc">/</button></td>
+                <td><button onclick="insert('*')" class="calc">X</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="insert(7)" class="calc">7</button></td>
+                <td><button onclick="insert(8)" class="calc">8</button></td>
+                <td><button onclick="insert(9)" class="calc">9</button></td>
+                <td><button onclick="insert('-')" class="calc">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="insert(4)" class="calc">4</button></td>
+                <td><button onclick="insert(5)" class="calc">5</button></td>
+                <td><button onclick="insert(6)" class="calc">6</button></td>
+                <td><button onclick="insert('+')" class="calc">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="insert(1)" class="calc">1</button></td>
+                <td><button onclick="insert(2)" class="calc">2</button></td>
+                <td><button onclick="insert(3)" class="calc">3</button></td>
+                <td><button onclick="calcular()" class="calc">=</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="insert(0)" class="calc">0</button></td>
+                <td><button onclick="insert('.')" class="calc">.</button></td>
+            </tr>
+        </table>
+        </div>
+        <script>
+            function insert(num) {
+                var numeros = document.getElementById('resultadodacalc').innerHTML;
+                document.getElementById('resultadodacalc').innerHTML = numeros + num;
+            }
+            function clean() {
+                document.getElementById('resultadodacalc').innerHTML = "";
+            }
+            function back() {
+                var resultados2 = document.getElementById('resultadodacalc').innerHTML;
+                document.getElementById('resultadodacalc').innerHTML = resultados2.substring(0, resultados2.length - 1)
+            }
+            function calcular() {
+                var resultados3 = document.getElementById('resultadodacalc').innerHTML;
+                if (resultados3) {
+                    document.getElementById('resultadodacalc').innerHTML = eval(resultados3);
+                }
+
+            }
+        </script>
+        <div class="abc">
+        <div class="a">
+            <button class="botao" onclick="bhaskara()">Bhaskara</button> <br>
+            <input class="input" type="number" id="formula-resolutiva1" placeholder="A">
+            <input class="input" type="number" id="formula-resolutiva2" placeholder="B">
+            <input class="input" type="number" id="formula-resolutiva3" placeholder="C">
+            <br>
+            <p> X1: <span id="resolução-1"> </span></p>
+            <p> X2: <span id="resolução-1.2"> </span></p>
+            <br>
+            <button class="botao" onclick="teorema()">Teorema de Pitágoras</button> <br>
+            <input class="input" type="number" id="pitagoras1" placeholder="cateto 1">
+            <input class="input" type="number" id="pitagoras2" placeholder="cateto 2">
+            <br>
+            <p> A Hipotenusa será: <span id="resolucao-2"> </span></p><br>
+            <button class="botao" onclick="raiz()">Raiz quadrada</button><br>
+            <input class="input" type="number" id="raiz" placeholder="número"> <br>
+            <p> A raíz quadrada será: <span id="resolucao-3"></span><br>
+        </div>
+        <div class="b">
+            <button class="botao" onclick="expo()">Exponencial</button> <br>
+            <input class="input" type="number" id="expon" placeholder="Número Exponenciado">
+            <input class="input" type="number" id="expon2" placeholder="Exponenciação"><br>
+            <p>O Exponencial será: <span id="resolucao-4"></span></p>
+            <br>
+            <button class="botao" onclick="regratresdir()">Regra de três direta</button> <br>
+            <input class="input" type="number" id="fir1">
+            <input class="input" type="number" id="fir2">
+            <input class="input" type="number" id="fir3"><br>
+            <p>A regra será: <span id="resp"></span></p>
+            <br>
+            <button class="botao" onclick="regratresind()">Regra de três indireta</button>
+            <br>
+            <input class="input" type="number" id="fin1">
+            <input class="input" type="number" id="fin2">
+            <input class="input" type="number" id="fin3">
+            <br>
+            <p>A regra será: <span id="resp2"></span></p>
+        </div>
+        <div class="c">
+            <button class="botao" onclick="fato()">Fatorial</button> <br>
+            <input class="input" type="number" id="fat">
+            <br>
+            <p>o fatorial será: <span id="resultadof"></span></p>
+            <br>
+            <button class="botao" onclick="p()">Porcentagem</button> <br>
+            <input class="input" type="number" id="N1" placeholder="porcento">
+            <input class="input" type="number" id="N2" placeholder="number">
+            <br>
+            <p>Resolução:<span id="porc"></span></p>
+            <br>
+            <button class="botao" onclick="pes()">Conversor para pes</button><br>
+            <input class="input" name="" id="metros">
+            <br>
+            <p>O resultado será: <span id="textpes"></span></p>
+        </div>
+        <div></div>
+    </main>
+
+    <footer>
+        <img src="Icons/logofooter.png" class="img">
+        <div class="pe">
+            <h3>Mídia social</h3>
+            <button class="bott"><i class="fa-brands fa-instagram fa-2x" style="color: #8902cc;"></i></button>
+            <button class="bott"><i class="fa-brands fa-twitter fa-2x" style="color: #8902cc;"></i></button>
+            <button class="bott"><i class="fa-brands fa-facebook fa-2x" style="color: #8902cc;"></i></button>
+        </div>
+
+        <p class="copy"> &copy; Space Math 2023. Todos os direitos reservados. </p>
+    </footer>
+</body>
+
+</html>
